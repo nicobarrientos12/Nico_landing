@@ -10,8 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body class="page-home page-home-cinematic">
   <div class="bg-grid" aria-hidden="true"></div>
+  <div class="home-aura" aria-hidden="true"></div>
+  <div class="home-orbit" aria-hidden="true"></div>
 
   <header class="site-header">
     <nav class="nav container">
@@ -24,31 +26,59 @@
     </nav>
   </header>
 
-  <main class="page-main">
-    <section class="hero container">
-      <p class="kicker">Perfil profesional</p>
-      <h1>Nicolas Alejandro Barrientos Martinez</h1>
-      <p class="lead">
-        Sitio personal multipagina para presentar CV, trabajo dirigido y
-        biografía en un formato claro y profesional.
-      </p>
+  <main class="page-main container home-shell">
+    <section class="home-cine-hero">
+      <div class="home-cine-copy">
+        <p class="kicker">Portafolio de alto impacto</p>
+        <h1>Nicolas Alejandro Barrientos Martinez</h1>
+        <p class="lead">
+          Diseño y desarrollo soluciones tecnológicas con enfoque en impacto real,
+          visión estratégica y ejecución profesional.
+        </p>
+        <div class="home-hero-cta">
+          <a href="cv.html" class="btn btn-primary">Entrar al CV</a>
+          <a href="biografia.html" class="btn btn-ghost">Conocer mi historia</a>
+        </div>
+      </div>
+
+      <aside class="home-cine-aside">
+        <p class="objective-label">Panel ejecutivo</p>
+        <h2>Resumen de perfil</h2>
+        <div class="home-cine-kpis">
+          <article><strong>7</strong><span>Experiencias</span></article>
+          <article><strong>7</strong><span>Certificaciones</span></article>
+          <article><strong>1</strong><span>Tesis aplicada</span></article>
+        </div>
+        <a href="tesis.html" class="btn btn-ghost">Ver trabajo dirigido</a>
+      </aside>
     </section>
 
-    <section class="grid-links container">
-      <article class="panel">
-        <h2>CV</h2>
-        <p>Experiencia, formacion, habilidades tecnicas y proyectos relevantes.</p>
+    <section class="home-cine-strip" aria-label="Indicadores de perfil">
+      <p>Ingeniería de Sistemas</p>
+      <p>Desarrollo de Software</p>
+      <p>Impacto Social</p>
+      <p>Mejora Continua</p>
+      <p>Colaboración</p>
+    </section>
+
+    <section class="home-cine-deck">
+      <article class="panel home-cine-card">
+        <p class="objective-label">01</p>
+        <h2>Currículum</h2>
+        <p>Trayectoria profesional, habilidades, tecnologías y formación académica en formato recruiter-ready.</p>
         <a href="cv.html" class="btn btn-primary">Abrir CV</a>
       </article>
-      <article class="panel">
+      <article class="panel home-cine-card">
+        <p class="objective-label">02</p>
         <h2>Trabajo Dirigido</h2>
-        <p>Proyecto de tesis para Refugio Narices Frias con datos academicos.</p>
-        <a href="tesis.html" class="btn btn-primary">Abrir Tesis</a>
+        <p>Proyecto de titulación con caso real: arquitectura, módulos, resultados, costos e impacto institucional.</p>
+        <a href="tesis.html" class="btn btn-primary">Abrir tesis</a>
       </article>
-      <article class="panel">
+      <article class="panel home-cine-card">
+        <p class="objective-label">03</p>
         <h2>Biografía</h2>
-        <p>Historia profesional, intereses y enfoque personal de trabajo.</p>
-        <a href="biografia.html" class="btn btn-primary">Abrir Biografía</a>
+        <p>Historia personal y profesional para entender mi visión, valores y forma de trabajo más allá del código.</p>
+        <a href="biografia.html" class="btn btn-primary">Abrir biografía</a>
       </article>
     </section>
   </main>
