@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -12,6 +12,8 @@
 </head>
 <body class="page-tesis">
   <div class="bg-grid" aria-hidden="true"></div>
+  <div class="thesis-aurora" aria-hidden="true"></div>
+  <div class="thesis-noise" aria-hidden="true"></div>
   <div class="paw-layer" aria-hidden="true">
     <span class="paw-print" style="--x: 8%; --y: 14%; --d: 0s;"></span>
     <span class="paw-print" style="--x: 18%; --y: 30%; --d: -1.2s;"></span>
@@ -43,33 +45,63 @@
 
   <header class="site-header">
     <nav class="nav container">
-      <a href="index.html" class="logo">MI PERFIL</a>
+      <a href="index.html" class="logo">NICOLAS BARRIENTOS</a>
       <div class="nav-links">
         <a href="cv.html">CV</a>
         <a href="tesis.html" class="active">Trabajo Dirigido</a>
-        <a href="biografia.html">Biografia</a>
+        <a href="biografia.html">Biografía</a>
       </div>
     </nav>
   </header>
+  <div class="thesis-progress" aria-hidden="true"><span></span></div>
 
   <main class="page-main container tesis-shell">
-    <section class="hero">
-      <p class="kicker">Trabajo dirigido</p>
-      <h1>Sistema Web de Adopciones, Seguimiento y Veterinaria Interna Refugio de Animales 'Narices Frias'</h1>
-      <p class="lead">Proyecto academico orientado a gestionar adopciones, seguimiento de mascotas y operaciones veterinarias internas.</p>
-      <div class="hero-metrics">
-        <article class="metric-card">
-          <strong class="count-up" data-prefix="+" data-suffix="%" data-target="60">+0%</strong>
-          <span>Eficiencia administrativa estimada</span>
-        </article>
-        <article class="metric-card">
-          <strong class="count-up" data-prefix="-" data-suffix="%" data-target="35">-0%</strong>
-          <span>Reduccion de tareas manuales</span>
-        </article>
-        <article class="metric-card">
-          <strong class="count-up" data-suffix="/7" data-target="24">0/7</strong>
-          <span>Acceso centralizado a historiales</span>
-        </article>
+    <section class="hero thesis-hero-cinematic">
+      <div class="thesis-hero-grid">
+        <div class="thesis-hero-main">
+          <p class="kicker">Trabajo dirigido | Caso real aplicado</p>
+          <h1>Sistema Web de Adopciones, Seguimiento y Veterinaria Interna Refugio de Animales 'Narices Frias'</h1>
+          <p class="lead">Proyecto academico orientado a gestionar adopciones, seguimiento de mascotas y operaciones veterinarias internas con trazabilidad, control operativo y enfoque en bienestar animal.</p>
+          <div class="thesis-hero-chips">
+            <span>React + Node</span>
+            <span>MySQL + Docker</span>
+            <span>JWT Security</span>
+            <span>Impacto Social</span>
+          </div>
+          <div class="thesis-hero-cta">
+            <a href="#arquitectura" class="btn btn-primary">Ver Arquitectura</a>
+            <a href="#resultados" class="btn btn-ghost">Ver Resultados</a>
+          </div>
+        </div>
+
+        <aside class="thesis-hero-side" aria-label="Resumen ejecutivo del proyecto">
+          <p class="objective-label">Resumen ejecutivo</p>
+          <div class="thesis-hero-side-grid">
+            <article>
+              <strong class="count-up" data-prefix="+" data-suffix="%" data-target="60">+0%</strong>
+              <span>Eficiencia administrativa estimada</span>
+            </article>
+            <article>
+              <strong class="count-up" data-prefix="-" data-suffix="%" data-target="35">-0%</strong>
+              <span>Reduccion de tareas manuales</span>
+            </article>
+            <article>
+              <strong class="count-up" data-suffix="/7" data-target="24">0/7</strong>
+              <span>Acceso centralizado a historiales</span>
+            </article>
+            <article>
+              <strong>11</strong>
+              <span>Capitulos de documentacion visual</span>
+            </article>
+          </div>
+        </aside>
+      </div>
+      <div class="thesis-chapter-pills" aria-label="Navegacion rapida de capitulos">
+        <a href="#introduccion">Introduccion</a>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#arquitectura">Arquitectura</a>
+        <a href="#resultados">Resultados</a>
+        <a href="#conclusiones">Conclusiones</a>
       </div>
     </section>
 
@@ -688,3 +720,4 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+
