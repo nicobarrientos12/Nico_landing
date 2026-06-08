@@ -2994,6 +2994,186 @@ main.page-main.container.tesis-shell > section#instituciones {
   align-items: stretch;
 }
 
+.page-cv.command-center .cv-bottom > .section:first-child,
+.page-cv.command-center .cv-bottom .cv-cert-section {
+  grid-column: 1 / -1;
+}
+
+.cv-cert-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.cv-cert-section::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(109, 183, 255, 0.42), rgba(201, 133, 80, 0.34), transparent);
+  pointer-events: none;
+}
+
+.cv-cert-heading {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cv-cert-heading h2 {
+  margin-bottom: 0;
+}
+
+.cv-cert-summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.45rem;
+}
+
+.cv-cert-summary span {
+  border: 1px solid color-mix(in srgb, var(--cv-cyan) 56%, transparent);
+  border-radius: 999px;
+  padding: 0.34rem 0.62rem;
+  background: color-mix(in srgb, var(--cv-cyan) 14%, transparent);
+  color: var(--text);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.cv-cert-showcase {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.9fr) minmax(0, 1.1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.cv-cert-panel {
+  border: 1px solid color-mix(in srgb, var(--cv-gold) 44%, var(--surface-border));
+  border-radius: 0.9rem;
+  padding: 1rem;
+  background:
+    linear-gradient(145deg, rgba(109, 183, 255, 0.14), rgba(201, 133, 80, 0.09)),
+    rgba(255, 255, 255, 0.02);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.22);
+  display: grid;
+  gap: 1rem;
+}
+
+.cv-cert-panel-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cv-cert-panel-top span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cv-cert-panel-top strong {
+  font-family: "Syne", sans-serif;
+  font-size: clamp(3.2rem, 8vw, 5.8rem);
+  line-height: 0.85;
+  color: color-mix(in srgb, var(--cv-cyan) 78%, #fff);
+}
+
+.cv-cert-panel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.cv-cert-panel-grid span {
+  border: 1px solid color-mix(in srgb, var(--surface-border) 86%, var(--cv-cyan));
+  border-radius: 0.65rem;
+  padding: 0.62rem;
+  background: rgba(255, 255, 255, 0.025);
+  color: var(--text);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.cv-cert-panel-footer {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.cv-cert-panel-footer p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+  border-top: 1px solid var(--surface-border);
+  padding-top: 0.62rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.cv-cert-panel-footer strong {
+  color: color-mix(in srgb, var(--cv-gold) 84%, #fff);
+  font-family: "Syne", sans-serif;
+  font-size: 1.1rem;
+}
+
+.cv-cert-list {
+  counter-reset: cert-counter;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  color: var(--text);
+}
+
+.cv-cert-list li {
+  counter-increment: cert-counter;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 58px;
+  border: 1px solid color-mix(in srgb, var(--surface-border) 88%, var(--cv-cyan));
+  border-radius: 0.72rem;
+  padding: 0.58rem 0.68rem;
+  background: rgba(255, 255, 255, 0.025);
+  color: color-mix(in srgb, var(--muted) 86%, #fff);
+  font-size: 0.88rem;
+  line-height: 1.28;
+  overflow-wrap: anywhere;
+  transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+}
+
+.cv-cert-list li::before {
+  content: counter(cert-counter, decimal-leading-zero);
+  display: inline-grid;
+  place-items: center;
+  width: 2.05rem;
+  aspect-ratio: 1;
+  border: 1px solid color-mix(in srgb, var(--cv-gold) 54%, transparent);
+  border-radius: 0.6rem;
+  background: color-mix(in srgb, var(--cv-gold) 16%, transparent);
+  color: color-mix(in srgb, var(--cv-gold) 84%, #fff);
+  font-family: "Syne", sans-serif;
+  font-size: 0.72rem;
+}
+
+.cv-cert-list li:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--cv-cyan) 58%, var(--surface-border));
+  background: rgba(255, 255, 255, 0.04);
+}
+
 @media (max-width: 1020px) {
   .page-cv.command-center .cv-cc-hero,
   .page-cv.command-center .cv-showcase,
@@ -3023,6 +3203,29 @@ main.page-main.container.tesis-shell > section#instituciones {
 
   .cv-td-grid {
     grid-template-columns: 1fr;
+  }
+
+  .cv-cert-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-cert-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .cv-cert-heading {
+    display: grid;
+  }
+
+  .cv-cert-summary {
+    justify-content: flex-start;
+  }
+
+  .cv-cert-list li {
+    min-height: auto;
+    align-items: start;
   }
 }
 
